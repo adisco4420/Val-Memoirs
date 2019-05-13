@@ -1,0 +1,9 @@
+.user-avatar{
+    background: orange;
+    border-radius: 47%;
+    padding: 4px;
+    color: white
+}
+.like-btn{
+    cursor: pointer;
+}
