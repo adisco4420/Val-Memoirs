@@ -6,8 +6,8 @@ import Slideshow from '../Slider';
 
 const allStories = [
     {
-        firstName: 'Sodiq', lastName: 'Alabi',
-        username: 'adisco4420', story: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, 
+        firstName: 'Jon', lastName: 'Snow',
+        username: 'jonsnow', story: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, 
         and going through the cites of the word in classical literature, discovered the undoubtable source`,
         gender: 'male', headline: 'Where can I get some', likes: 2
     },
@@ -16,7 +16,13 @@ const allStories = [
         username: 'davido', story: `is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
         text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book`,
         gender: 'male', headline: 'Where does it come from', likes: 4
-    }
+    },
+    {
+        firstName: 'Kate', lastName: 'Okwuraiwe',
+        username: 'ketazy', story: `At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero 
+        tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus`,
+        gender: 'female', headline: 'Finibus Bonorum et Malorum', likes: 6
+    },
 ]
 class Home extends React.Component {
     state = {
