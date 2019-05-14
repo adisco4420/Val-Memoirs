@@ -39,10 +39,10 @@ class Slideshow extends React.Component {
             <Slide {...properties}>
               {
                 this.state.allImages.map((item, index) => {
-                  return <div key={index} className="each-slide">
-                    <div style={{
-                      'backgroundImage': `url(${item.urls.small})`,
-                      height: '400px', width: '100%'
+                  return <div  key={index} className="each-slide container">
+                    <div className="" style={{
+                      'backgroundImage': `url(${item.urls.regular})`,
+                      height: '400px', width: '100%', backgroundRepeat: 'no-repeat'
                     }}>
                     </div>
                   </div>
