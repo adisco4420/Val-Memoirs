@@ -8,7 +8,7 @@ import {
 
 const TextInput = ({ handler, touched, hasError, meta }) => (
   <div className={`${meta.inputClass || 'col-md-6'} mb-2`}>
-    <input
+    <input type="text"
       className="form-control form-control-sm"
       placeholder={`Enter ${meta.label}`}
       {...handler()}
@@ -29,7 +29,7 @@ const TextArea = ({ handler, touched, hasError, meta }) => (
     </span>
   </div>
 );
-const SelectBox = ({ handler }) => (
+const SelectBox = ({ handler, touched, hasError }) => (
   <div className="col-md-6">
     <select className="form-control form-control-sm" {...handler()}>
       <option value="" disabled>
@@ -38,6 +38,9 @@ const SelectBox = ({ handler }) => (
       <option value="male">Male</option>
       <option value="female">Female</option>
     </select>
+    <span className="text-danger text-monospace" style={{ fontSize: "13px" }}>
+      {touched && hasError("required") && `Gender is required`}
+    </span>
   </div>
 );
 
@@ -55,8 +58,11 @@ class Header extends React.Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    console.log("Form values", this.loginForm.value);
-    this.props.saveStory(this.loginForm.value)
+    // console.log("Form values", this.loginForm.value);
+    if(this.loginForm.valid) {
+      this.props.saveStory(this.loginForm.value);
+      this.handleReset();
+    }
   };
   render() {
     return (
@@ -165,6 +171,7 @@ class Header extends React.Component {
 
                           <div className="modal-footer">
                             <button
+                             data-toggle="modal" data-target="#exampleModalCenter"
                               disabled={invalid}
                               type="submit"
                               className="btn btn-primary"
