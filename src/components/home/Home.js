@@ -39,8 +39,8 @@ class Home extends React.Component {
         if (!found && username.trim().length) {
           return true;
         } else {
-          return false;
-        }
+          return false
+        }  
       }
     getAvatar(item) {
         return item.firstName[0].toUpperCase() + item.lastName[0].toUpperCase()
